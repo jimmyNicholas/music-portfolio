@@ -1,40 +1,24 @@
-import { Box, Button, Flex, Link } from "@chakra-ui/react";
+import NavBar from "@/components/ui/navbar";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="">
-      <Box className="bg-slate-500 px-4">
-        <Flex gap="4" justify="flex-end">
-          <Link
-            variant="plain"
-            href="/"
-            className="bg-purple-500 px-2 my-2 rounded-lg"
-          >
-            home
-          </Link>
-          <Link
-            variant="plain"
-            href="#"
-            className="bg-purple-500 px-2 my-2 rounded-lg"
-          >
-            about
-          </Link>
-          <Link
-            variant="plain"
-            href="#"
-            className="bg-purple-500 px-2 my-2 rounded-lg"
-          >
-            [//..//] Lash Lash
-          </Link>
-          <Link
-            variant="plain"
-            href="#"
-            className="bg-purple-500 px-2 my-2 rounded-lg"
-          >
-            Mongen
-          </Link>
-        </Flex>
-      </Box>
-    </div>
+    <>
+      <NavBar />
+      <div className="relative min-h-screen w-full">
+        <div className="absolute inset-0 z-0">
+          <Image
+            className="object-cover"
+            src="/media/tree.png"
+            width={2000}
+            height={1000}
+            alt="Picture of a distorted tree"
+          />
+        </div>
+        <div className="relative z-10 p-8">
+          <h1 className="text-4xl font-bold text-center">Your Content Here</h1>
+        </div>
+      </div>
+    </>
   );
 }
